@@ -1,0 +1,874 @@
+@charset "UTF-8";
+
+html {
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 2.5vmin;
+  line-height: 1.5;
+  margin: 0;
+  padding:0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.header {
+  color: #000A81;
+}
+
+.header p {
+  font-size: 2vmin;
+}
+
+.header h3{
+  font-size: 2em;
+  font-weight: normal;
+  margin: 0;
+}
+
+.header .underline {
+  position: relative;
+  display: inline-block;
+}
+
+.header .underline:before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  display: inline-block;
+  width: 100px;
+  height: 2px;
+  background-color: #C4E538;
+}
+
+/**************** モーダル画面 ****************/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  z-index: 10;
+  background-color: #fff;
+  padding: 5%;
+}
+
+.modal .logo {
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal .logo img {
+  height: 10vmin;
+}
+
+.modal .logo i {
+  color: #CC3467;
+  font-size: 5vmin;
+}
+
+.modal .logo i:hover {
+  cursor: pointer;
+}
+
+.modal .inner {
+  color: #777;
+  text-align: center;
+}
+
+.modal .inner .title {
+  margin-bottom: 5%;
+}
+
+.modal .inner .desciption ul {
+  list-style: none;
+  font-size: 4vmin;
+  padding: 0;
+  text-align: left;
+  margin: 5% 10%;
+}
+
+.modal .inner .desciption li {
+  margin-bottom: 3%;
+}
+
+.modal .inner .desciption li i {
+  color: #CC3467;
+}
+
+.modal .inner .function {
+  text-align: left;
+  padding: 5%;
+}
+
+.modal .inner .function ul {
+  font-size: 2.5vmin;
+}
+
+.modal .inner .function .conversation{
+  color: #fff;
+  font-size: 14px;
+  margin: 5% 0;
+}
+
+.modal .inner .function .right {
+  text-align: right;
+  margin-top: 5%;
+}
+
+.modal .inner .function .right p {
+  display: inline-block;
+  min-width: 50%;
+  text-align: right;
+  padding: 2%;
+  background-color: #000A81;
+  border-radius: 5em 5em 0 5em;
+}
+
+.modal .inner .function .left {
+  text-align: left;
+}
+
+.modal .inner .function .left p {
+  display: inline-block;
+  min-width: 50%;
+  padding: 5%;
+  background-color: #CC3467;
+  border-radius: 5em 5em 5em 0;
+}
+
+.modal .inner .function .attention {
+  margin: 5% 0;
+}
+
+.modal .inner .function span {
+  color: #fff;
+  background-color: #C4E538;
+  padding: 1% 2%;
+}
+
+.modal .image {
+  text-align: center;
+}
+
+.modal .image img {
+  width: 50%;
+}
+
+/**************** ヘッダー ****************/
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  font-size: 2vmin;
+}
+
+header img {
+  height: 50px;
+}
+
+header p {
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+
+header p a {
+  display: inline-block;
+  line-height: 50px;
+  color: #777;
+  text-decoration: none;
+}
+
+header p a:hover {
+  color: #CC3467;
+}
+
+header .inquiry {
+  text-align: center;
+  background-color: #C4E538;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+header .inquiry:hover {
+  cursor: pointer;
+}
+
+/**************** トップ ****************/
+.top {
+  color: #fff;
+  position: relative;
+  background-color: #CC3467;
+  width: 100%;
+  height: 600px;
+}
+
+#top_head {
+  height: 100%;
+}
+
+.top_contents {
+  height: 100%;
+  background-image: url('../image/top_pc.png');
+  background-attachment: fixed;
+  background-position: bottom -10px right 0;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 3.5em;
+  padding: 5%;
+  margin: 0;
+}
+
+.top .content {
+  width: 40%;
+  padding: 0 5% 5% 5%;
+}
+
+.top .content_description {
+  padding: 5%;
+}
+
+.top .content_description p {
+  margin: 0;
+}
+
+.top .content_description .second_line {
+  padding-left: 10%;
+}
+
+.top button {
+  font-family: 'Noto Serif JP', sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5%;
+  padding: 5%;
+  background-color: #C4E538;
+  border: none;
+}
+
+.top button:hover {
+  cursor: pointer;
+}
+
+/**************** バナー ****************/
+.banner {
+  padding: 5%;
+}
+
+.banner_top p {
+  color: #fff;
+  margin: 5%;
+  padding: 5%;
+  background-color: #CC3467;
+  border-radius: 0 5em 5em 5em;
+}
+
+.banner_contents {
+  margin-bottom: 5%;
+}
+
+.banner_contents .content_header {
+  text-align: left;
+}
+
+.banner_contents .content_header p {
+  display: inline-block;
+  color: #fff;
+  min-width: 50%;
+  margin: 2% 10% 0 10%;
+  padding: 2%;
+  background-color: #000A81;
+  border-radius: 5em 5em 5em 0;
+}
+
+.banner_contents .content_images {
+  margin: 0 10%;
+  position: relative;
+  z-index: -1;
+}
+
+.banner_contents .content_images img {
+  width: 60%;
+}
+
+.banner_contents .content_images .blue_square {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background-color: #000A81;
+}
+
+.banner_contents .content_images .pink_square {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 150px;
+  height: 150px;
+  background-color: #CC3467;
+}
+
+.banner_contents .content_footer {
+  margin: 0 10%;
+  text-align: right;
+}
+
+.banner_contents .content_footer p {
+  color: #777;
+}
+
+.banner_contents .content_footer h2 {
+  font-weight: normal;
+  font-size: 50px;
+  color: #C4E538;
+  margin: -10% 0 -1% 0;
+}
+
+.banner_contents .content_footer .footer_inner {
+  border: 4px solid #CC3467;
+  border-radius: 4em;
+  background-color: #fff;
+  padding: 2% 5%;
+}
+
+/**************** アバウト ****************/
+.about {
+  padding: 5%;
+  background-color: #F0F0F0;
+}
+
+.about .header {
+  color: #fff;
+  padding: 2% 5%;
+  background-color: #C4E538;
+  border-radius: 5em;
+}
+
+.about .content {
+  width: 100%;
+}
+
+.about .content .icons {
+  text-align: center;
+  font-size: 100px;
+}
+
+.about .content td {
+  padding-left: 5%;
+  padding-top: 2%;
+}
+
+.about .content .sentence {
+  color: #777;
+}
+
+.about .content .sentence:hover {
+  cursor: pointer;
+}
+
+.about .fa-hands, span .blue {
+  color: #000A81;
+}
+
+.about .number, span .pink {
+  color: #CC3467;
+}
+
+.about .fa-cogs, span .yellow {
+  color: #C4E538;
+}
+
+/**************** ハイライト ****************/
+.highlight {
+  padding: 5%;
+}
+
+.features {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.features .feature_content {
+  position: relative;
+  background-color: #CC3467;
+  padding: 10px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.features .feature_content:hover {
+  cursor: pointer;
+}
+
+.features .feature_content p{
+  position: absolute;
+  padding: 10px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 180px;
+  text-align: center;
+  margin: 0;
+}
+
+/**************** カスタマーズ ****************/
+.customers {
+  padding: 5%;
+}
+
+.customers .customers_contents {
+  margin: 5% auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.customers .content {
+  position: relative;
+  height: 300px;
+}
+
+.customers .content .description {
+  position: absolute;
+  bottom: 0;
+}
+
+.customers .content .image img {
+  width: 300px;
+  height: 200px;
+}
+
+.customers .content .company {
+  position: relative;
+  background-color: #000A81;
+  padding: 5px;
+  width: 200px;
+  height: 200px;
+  margin-left: -30%;
+}
+
+.customers .content .company:hover {
+  cursor: pointer;
+}
+
+.customers .content .company p{
+  position: absolute;
+  padding: 5px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 200px;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+}
+
+/****** モーダル ******/
+.customers .modal .inner {
+  padding: 5%;
+}
+
+.customers .modal .inner .title h3 {
+  text-align: left;
+  color: #CC3467;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.customers .modal .image_paragraph {
+  width: 100%;
+  display: table;
+}
+
+.customers .modal .image_paragraph .list {
+  display: table-cell;
+  width: 50%;
+  padding: 0;
+  vertical-align: middle;
+}
+.customers .modal .image_paragraph .list ul {
+  list-style: circle;
+  padding-right: 5%;
+  text-align: left;
+}
+
+.customers .modal .image_paragraph .customer_image {
+  display: table-cell;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.modal .image_paragraph img {
+  width: 100%;
+}
+
+.customers .modal .paragraph {
+  margin: 5% 0;
+}
+
+.customers .modal .subtitle{
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+/**************** 無料トライアル ****************/
+.trial {
+  width: 100%;
+  color: #fff;
+  padding: 5% 0;
+  background-color: #C4E538;
+  text-align: center;
+}
+
+.trial .contents {
+  cursor: pointer;
+}
+
+/**************** 料金体系 ****************/
+.price {
+  padding: 5%;
+}
+
+.price .contents h3 {
+  margin-top: 0;
+  padding-bottom: 5%;
+}
+.price h4 {
+  font-weight: normal;
+  margin: 0 0 2% 0;
+}
+
+.price .contents {
+  padding: 5% 10% 0 10%;
+}
+
+.price .content {
+  width: 100%;
+  height: 30%;
+  padding: 5% 0;
+  display: table;
+}
+
+.price .content .underline {
+  position: relative;
+  display: inline-block;
+}
+
+.price .content .underline:before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color: #fff;
+}
+
+.price .content .content_title {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+  color: #fff;
+  box-sizing: border-box;
+  background-color: #CC3467;
+  padding: 5%;
+}
+
+.price .content .content_description {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #777;
+  box-sizing: border-box;
+  border: 1px solid #CC3467;
+  padding: 5%;
+  height: 450px;
+}
+
+.price .content .content_description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.price .content .content_description .subtitle {
+  font-weight: bold;
+}
+
+.price .content .other_service_title {
+  background-color: #777;
+}
+
+.price .content .other_service_description {
+  border: 1px solid #777;
+}
+
+.price .price_footer {
+  width: 100%;
+  text-align: center;
+  font-size: 2vmin;
+  color: #777;
+}
+
+/**************** よくある質問 ****************/
+.faq {
+  padding: 5%;
+  background-color: #F0F0F0;
+}
+
+.faq .contents {
+  padding: 5%;
+  color: #fff;
+}
+
+.faq .contents .content{
+  margin-bottom: 10%;
+}
+
+.faq .content .question {
+  text-align: right;
+}
+
+.faq .content .question p {
+  display: inline-block;
+  min-width: 50%;
+  text-align: right;
+  padding: 2%;
+  background-color: #000A81;
+  border-radius: 5em 5em 0 5em;
+}
+
+.faq .content .answer {
+  text-align: left;
+}
+
+.faq .content .answer p {
+  display: inline-block;
+  min-width: 50%;
+  padding: 5%;
+  background-color: #CC3467;
+  border-radius: 5em 5em 5em 0;
+}
+
+/**************** 会社概要 ****************/
+.company {
+  padding: 10% 5%;
+  text-align: center;
+}
+
+.company .header h3 {
+  font-size: 2em;
+  color: #777;
+}
+
+.company .header .underline {
+  position: relative;
+  display: inline-block;
+}
+
+.company .header .underline:before {
+  content: '';
+  position: absolute;
+  left: 30%;
+  bottom: -10px;
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background-color: #CC3467;
+}
+
+.company .company_logo img {
+  width: 70%;
+}
+
+.company .inner {
+  display: table;
+  margin-top: 5%;
+}
+
+.company .company_logo {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.company .contents {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  color: #777;
+}
+
+.company .contents ul {
+  list-style: none;
+}
+
+.company .contents .subtitle {
+  font-weight: bold;
+}
+
+.company .contents li {
+  margin-bottom: 5%;
+}
+
+/**************** フッター ****************/
+footer {
+  width: 100%;
+  background-color: #777;
+  color: #fff;
+  padding: 2% 0;
+  text-align: center;
+  font-size: 2vmin;
+}
+
+/* .float */
+/**** #menuのフォーマット ****/
+#menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #777;
+}
+
+.homemenu img {
+	margin: 0;
+  height: 40px;
+}
+
+/******** #menuのslidetoggle ********/
+#menu dd {
+  margin-left: auto;
+  text-align: center;
+  padding: 30px;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 20%;
+}
+
+.homemenu ul{
+  margin: 0;
+  padding: 5px;
+}
+
+.homemenu li{
+  margin: 0 auto;
+  padding: 10%;
+  font-size: 12px;
+  text-decoration: none;
+  list-style: none;
+}
+
+#menu dd a:hover {
+  cursor: pointer;
+  color: #CC3467;
+}
+
+
+/**************** ハンバーガーボタン ****************/
+.icon-animation {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.icon-animation span {
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  display: block;
+  background-color: #CC3467;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  top: 50%;
+}
+
+.icon-animation .top {
+  -webkit-transform: translateY(-13px);
+  -ms-transform: translateY(-13px);
+  transform: translateY(-13px);
+}
+
+.icon-animation .bottom {
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  transform: translateY(13px);
+}
+
+.is-open .middle {
+  background: rgba(215, 215, 215, 0);
+}
+
+.is-open .top {
+  -webkit-transform: rotate(-45deg) translateY(0px);
+  -ms-transform: rotate(-45deg) translateY(0px);
+  transform: rotate(-45deg) translateY(0px);
+}
+
+.is-open .bottom {
+  -webkit-transform: rotate(45deg) translateY(0px);
+  -ms-transform: rotate(45deg) translateY(0px);
+  transform: rotate(45deg) translateY(0px);
+}
+
+/**************** topに戻るボタン ****************/
+#scrollTop a {
+  position: fixed;
+  text-decoration: none;
+  color: #CC3467;
+  left: 20px;
+  bottom: 0;
+  font-size: 10vmin;
+}
+
+#scrollTop a:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/**************** レスポンシブデザイン ****************/
+@media (max-width: 960px) {
+  header {
+    display: none;
+  }
+}
