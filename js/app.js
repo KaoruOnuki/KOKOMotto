@@ -36,6 +36,18 @@ $(function () {
       },500);
   });
 
+  //////////////////////////////// メッセージボタン
+  var msgBtn = $('#inquiry_message');
+  msgBtn.hide();
+  // ある程度スクロースされたら#topボタンを表示、それ以外は非表示のまま
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 200) {
+        msgBtn.fadeIn();
+    }else{
+        msgBtn.fadeOut();
+    }
+  });
+
   //////////////////////////////// モダール
   $(".sentence").on('click', function() {
     var self = $(this).parent(".section").find(".modal");

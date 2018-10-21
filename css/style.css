@@ -1,4 +1,14 @@
 @charset "UTF-8";
+:root {
+  --pink: #b74e73;
+  --green: #4DB493;
+  --orange: #E28721;
+  --lightgrey: #F0F0F0;
+  --blue: #000A81;
+  --darkgrey: #777;
+  --font_gothic: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  --font_mincho: 'Noto Serif JP', sans-serif;
+}
 
 html {
   margin:0;
@@ -6,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Serif JP', sans-serif;
+  font-family: var(--font_mincho);
   font-size: 2.5vmin;
   line-height: 1.5;
   margin: 0;
@@ -16,17 +26,25 @@ body {
 }
 
 .header {
-  color: #000A81;
+  color: #000;
+  margin: 0 10%;
 }
 
 .header p {
+  display: inline-block;
+  font-family: var(--font_gothic);
   font-size: 2vmin;
+  color: #fff;
+  background-color: var(--green);
+  padding: 1% 2%;
+  border-radius: 3vmin;
 }
 
 .header h3{
   font-size: 2em;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0;
+  line-height: 1em;
 }
 
 .header .underline {
@@ -41,7 +59,7 @@ body {
   display: inline-block;
   width: 100px;
   height: 2px;
-  background-color: #C4E538;
+  background-color: var(--green);
 }
 
 /**************** モーダル画面 ****************/
@@ -69,7 +87,7 @@ body {
 }
 
 .modal .logo i {
-  color: #CC3467;
+  color: var(--pink);
   font-size: 5vmin;
 }
 
@@ -78,7 +96,7 @@ body {
 }
 
 .modal .inner {
-  color: #777;
+  color: var(--darkgrey);
   text-align: center;
 }
 
@@ -99,7 +117,7 @@ body {
 }
 
 .modal .inner .desciption li i {
-  color: #CC3467;
+  color: var(--pink);
 }
 
 .modal .inner .function {
@@ -139,7 +157,7 @@ body {
   display: inline-block;
   min-width: 50%;
   padding: 5%;
-  background-color: #CC3467;
+  background-color: var(--pink);
   border-radius: 5em 5em 5em 0;
 }
 
@@ -149,7 +167,7 @@ body {
 
 .modal .inner .function span {
   color: #fff;
-  background-color: #C4E538;
+  background-color: var(--green);
   padding: 1% 2%;
 }
 
@@ -163,10 +181,19 @@ body {
 
 /**************** ヘッダー ****************/
 header {
+  font-family: var(--font_gothic);
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid var(--lightgrey);
+  z-index: 10;
+}
+
+header .header_inner {
   display: flex;
   justify-content: space-around;
-  background-color: #fff;
   font-size: 2vmin;
+  margin: 0 5%;
 }
 
 header img {
@@ -181,99 +208,153 @@ header p {
 header p a {
   display: inline-block;
   line-height: 50px;
-  color: #777;
+  color: #000;
   text-decoration: none;
 }
 
 header p a:hover {
-  color: #CC3467;
+  color: var(--green);
+}
+
+header .border_left {
+  height: 2vmin;
+  padding-left: 1vmin;
+  border-left: 1px solid var(--pink);
 }
 
 header .inquiry {
   text-align: center;
-  background-color: #C4E538;
+  background-color: var(--pink);
+  border: 1px solid #fff;
+  border-radius: 0.5em;
   color: #fff;
-  font-weight: bold;
-  font-size: 10px;
+  font-size: 1em;
   padding: 1%;
   margin-bottom: 2%;
 }
 
 header .inquiry:hover {
   cursor: pointer;
+  background-color: var(--darkgrey);
+  border: 1px solid var(--green);
 }
 
 /**************** トップ ****************/
-.top {
+.top_section {
   color: #fff;
   position: relative;
-  background-color: #CC3467;
+  background-color: var(--pink);
   width: 100%;
   height: 600px;
+  padding-top: 5%;
 }
 
 #top_head {
   height: 100%;
+  background-image: url('../image/top2.png');
+  background-position: bottom 10% right 50%;
+  background-size: 25%;
+  background-repeat: no-repeat;
 }
 
 .top_contents {
   height: 100%;
-  background-image: url('../image/top_pc.png');
-  background-attachment: fixed;
-  background-position: bottom -10px right 0;
+  background-image: url('../image/top1.png');
+  background-position: bottom -10% right -10%;
   background-size: 50%;
   background-repeat: no-repeat;
 }
 
 h1 {
   font-size: 3.5em;
-  padding: 5%;
+  padding: 5% 5% 2% 5%;
   margin: 0;
 }
 
-.top .content {
-  width: 40%;
+.top_section .content {
+  width: 50%;
   padding: 0 5% 5% 5%;
 }
 
-.top .content_description {
-  padding: 5%;
+.top_section .content h2 {
+  font-size: 2.5em;
+  margin-top: 0;
 }
 
-.top .content_description p {
+.top_section .content_description {
+  padding: 4% 1%;
+}
+
+.top_section .content_description p {
+  display: inline-block;
+  font-size: 1.5em;
   margin: 0;
 }
 
-.top .content_description .second_line {
-  padding-left: 10%;
+.top_section .content_description p img {
+  height: 1em;
+  margin-right: 0.5em;
+  margin-bottom: -1%;
+  filter: drop-shadow(0 0 5px #fff);
 }
 
-.top button {
-  font-family: 'Noto Serif JP', sans-serif;
+.top_section .content_description .second_line {
+  margin-left: 5%;
+}
+
+.top_section .content_description .third_line {
+  margin-left: 5%;
+}
+
+.top_section button {
+  font-family: var(--font_gothic);
   color: #fff;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 1em;
   margin-top: 5%;
   padding: 5%;
-  background-color: #C4E538;
-  border: none;
+  background-color: var(--green);
+  border: 1px solid #fff;
+  border-radius: 0.5em;
 }
 
-.top button:hover {
+.top_section button:hover {
   cursor: pointer;
+  background-color: var(--darkgrey);
 }
 
 /**************** バナー ****************/
 .banner {
   padding: 5%;
 }
+.banner_top {
+  margin: 2% 0 2% 5%;
+  padding: 0 5% 5% 5%;
+  background-image: url('../image/comment_pink.svg');
+  background-position: top 0 right 0;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  z-index: -1;
+}
+
+.banner_top:before {
+  content: '';
+  position: absolute;
+  left: -5%;
+  top: 0px;
+  display: inline-block;
+  width: 10%;
+  height: 2px;
+  background-color: var(--pink);
+}
 
 .banner_top p {
+  font-size: 3.5vmin;
   color: #fff;
-  margin: 5%;
-  padding: 5%;
-  background-color: #CC3467;
-  border-radius: 0 5em 5em 5em;
+}
+
+.banner .first {
+  margin-top: -8%;
 }
 
 .banner_contents {
@@ -284,112 +365,126 @@ h1 {
   text-align: left;
 }
 
-.banner_contents .content_header p {
+.banner_contents .content_header .question {
   display: inline-block;
   color: #fff;
   min-width: 50%;
-  margin: 2% 10% 0 10%;
-  padding: 2%;
-  background-color: #000A81;
-  border-radius: 5em 5em 5em 0;
-}
-
-.banner_contents .content_images {
   margin: 0 10%;
-  position: relative;
-  z-index: -1;
+  padding: 1%;
+  background-image: url('../image/comment_green.svg');
+  background-position: bottom 0 left 0;
+  background-repeat: no-repeat;
+  font-size: 3vmin;
 }
 
-.banner_contents .content_images img {
-  width: 60%;
+.banner_contents .content_header .question p {
+  padding-left: 10%;
 }
 
-.banner_contents .content_images .blue_square {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  background-color: #000A81;
-}
-
-.banner_contents .content_images .pink_square {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  width: 150px;
-  height: 150px;
-  background-color: #CC3467;
-}
-
-.banner_contents .content_footer {
+.banner_contents .content_header .answer {
+  display: inline-block;
+  width: 80%;
+  color: var(--pink);
   margin: 0 10%;
-  text-align: right;
+  font-size: 3.5vmin;
 }
 
-.banner_contents .content_footer p {
-  color: #777;
+.banner_contents .content_header .answer p {
+  font-family: var(--font_gothic);
+  margin: 0 0 1% 0;
+  font-weight: bold;
+  text-align: center;
 }
 
-.banner_contents .content_footer h2 {
-  font-weight: normal;
-  font-size: 50px;
-  color: #C4E538;
-  margin: -10% 0 -1% 0;
+.banner_contents .content_inner {
+  display: table;
+  margin: 0 10%;
 }
 
-.banner_contents .content_footer .footer_inner {
-  border: 4px solid #CC3467;
-  border-radius: 4em;
-  background-color: #fff;
-  padding: 2% 5%;
+.banner_contents .content_inner .text{
+  display: table-cell;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.banner_contents .content_inner .text p{
+  font-family: var(--font_gothic);
+  font-size: 2vmin;
+  padding: 0 5%;
+}
+
+.banner_contents .content_inner .image {
+  display: table-cell;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.banner_contents .content_inner img {
+  width: 100%;
 }
 
 /**************** アバウト ****************/
 .about {
   padding: 5%;
-  background-color: #F0F0F0;
+  background-color: var(--lightgrey);
 }
 
 .about .header {
-  color: #fff;
-  padding: 2% 5%;
-  background-color: #C4E538;
-  border-radius: 5em;
+  display: table;
+  margin: 0 5%;
+}
+
+.about .header h3{
+  display: table-cell;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.about .header p {
+  display: table-cell;
+  background-color: transparent;
+  border-left: 2px solid var(--pink);
+  border-radius: 0;
+  color: #000;
+  vertical-align: middle;
 }
 
 .about .content {
   width: 100%;
 }
 
-.about .content .icons {
+.about .content td {
+  width: 33%;
+}
+
+.about .content p {
+  margin: 0;
+}
+
+.about .content .section_one td {
   text-align: center;
   font-size: 100px;
+  font-weight: bold;
+  color: var(--pink);
 }
 
-.about .content td {
-  padding-left: 5%;
-  padding-top: 2%;
+.about .content .section_two td {
+  font-family: var(--font_gothic);
+  padding: 0 2%;
+  text-align: center;
+  vertical-align: top;
 }
 
-.about .content .sentence {
-  color: #777;
+.about .content .section_two td h4 {
+  border-left: 2px solid var(--pink);
 }
 
-.about .content .sentence:hover {
-  cursor: pointer;
+.about .content .section_two td .bold {
+  font-weight: bold;
 }
 
-.about .fa-hands, span .blue {
-  color: #000A81;
-}
-
-.about .number, span .pink {
-  color: #CC3467;
-}
-
-.about .fa-cogs, span .yellow {
-  color: #C4E538;
+.about .content .desciption p {
+  font-size: 2vmin;
 }
 
 /**************** ハイライト ****************/
@@ -397,42 +492,71 @@ h1 {
   padding: 5%;
 }
 
+.highlight .header p {
+  background-color: var(--pink);
+}
+
+.highlight .header .underline:before {
+  background-color: var(--pink);
+}
+
 .features {
   margin-top: 5%;
   display: flex;
   justify-content: space-around;
-  color: #fff;
 }
 
-.features .feature_content {
-  position: relative;
-  background-color: #CC3467;
-  padding: 10px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+.features td {
+  width: 50%;
+  font-family: var(--font_gothic);
 }
 
-.features .feature_content:hover {
-  cursor: pointer;
+.features .left {
+  background-color: var(--green);
+  border-radius: 25px 0 0 300px;
+  border-right: 2px solid var(--green);
+  padding: 0;
+}
+
+.features .right {
+  background-color: var(--green);
+  border-radius: 0 25px 300px 0;
+  border-right: 2px solid var(--green);
+  padding: 0;
 }
 
 .features .feature_content p{
-  position: absolute;
-  padding: 10px;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 180px;
+  font-size: 3.5vmin;
   text-align: center;
-  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.features .description_left {
+  border-right: 2px solid var(--green);
+}
+
+.features .description_right {
+  border-left: 2px solid var(--green);
+}
+
+.features .description_left p, .features .description_right p {
+  font-size: 2vmin;
+  color: #000;
+  padding: 2% 5%;
 }
 
 /**************** カスタマーズ ****************/
 .customers {
-  padding: 5%;
+  padding: 0 5%;
+}
+
+.customers .header p {
+  background-color: var(--orange);
+}
+
+.customers .header .underline:before {
+  background-color: var(--orange);
 }
 
 .customers .customers_contents {
@@ -458,7 +582,10 @@ h1 {
 
 .customers .content .company {
   position: relative;
-  background-color: #000A81;
+  font-family: var(--font_gothic);
+  font-weight: bold;
+  background-color: var(--orange);
+  border-radius: 100px;
   padding: 5px;
   width: 200px;
   height: 200px;
@@ -490,7 +617,7 @@ h1 {
 
 .customers .modal .inner .title h3 {
   text-align: left;
-  color: #CC3467;
+  color: var(--pink);
   font-weight: bold;
   border-bottom: 1px solid #ddd;
 }
@@ -506,6 +633,7 @@ h1 {
   padding: 0;
   vertical-align: middle;
 }
+
 .customers .modal .image_paragraph .list ul {
   list-style: circle;
   padding-right: 5%;
@@ -536,7 +664,7 @@ h1 {
   width: 100%;
   color: #fff;
   padding: 5% 0;
-  background-color: #C4E538;
+  background-color: var(--blue);
   text-align: center;
 }
 
@@ -549,23 +677,34 @@ h1 {
   padding: 5%;
 }
 
+.price .header p {
+  background-color: var(--pink);
+}
+
+.price .header .underline:before {
+  background-color: var(--pink);
+}
+
+.price .contents {
+  font-family: var(--font_gothic);
+  margin: 0 10%;
+  padding-top: 3%;
+}
+
 .price .contents h3 {
   margin-top: 0;
   padding-bottom: 5%;
 }
+
 .price h4 {
   font-weight: normal;
   margin: 0 0 2% 0;
 }
 
-.price .contents {
-  padding: 5% 10% 0 10%;
-}
-
 .price .content {
   width: 100%;
   height: 30%;
-  padding: 5% 0;
+  padding: 2% 0;
   display: table;
 }
 
@@ -580,7 +719,7 @@ h1 {
   bottom: 5px;
   display: inline-block;
   width: 50px;
-  height: 1px;
+  height: 2px;
   background-color: #fff;
 }
 
@@ -590,19 +729,20 @@ h1 {
   width: 50%;
   color: #fff;
   box-sizing: border-box;
-  background-color: #CC3467;
+  background-color: var(--pink);
+  border-radius: 50px 0 0 50px;
   padding: 5%;
 }
 
 .price .content .content_description {
   display: table-cell;
   vertical-align: middle;
-  font-size: 14px;
-  color: #777;
+  font-size: 2vmin;
   box-sizing: border-box;
-  border: 1px solid #CC3467;
-  padding: 5%;
-  height: 450px;
+  border: 1px solid var(--pink);
+  border-radius: 0 50px 50px 0;
+  padding: 2%;
+  height: auto;
 }
 
 .price .content .content_description ul {
@@ -615,69 +755,70 @@ h1 {
 }
 
 .price .content .other_service_title {
-  background-color: #777;
+  background-color: var(--darkgrey);
 }
 
 .price .content .other_service_description {
-  border: 1px solid #777;
+  border: 1px solid var(--darkgrey);
 }
 
 .price .price_footer {
   width: 100%;
   text-align: center;
   font-size: 2vmin;
-  color: #777;
+  color: var(--darkgrey);
 }
 
 /**************** よくある質問 ****************/
 .faq {
   padding: 5%;
-  background-color: #F0F0F0;
+  background-color: var(--lightgrey);
 }
 
 .faq .contents {
-  padding: 5%;
-  color: #fff;
+  font-family: var(--font_gothic);
+  padding: 5% 0 0 0;
 }
 
-.faq .contents .content{
-  margin-bottom: 10%;
+.faq .contents td {
+  vertical-align: top;
+  text-align: center;
 }
 
-.faq .content .question {
-  text-align: right;
+.faq .first td {
+  width: 33%;
 }
 
-.faq .content .question p {
-  display: inline-block;
-  min-width: 50%;
-  text-align: right;
-  padding: 2%;
-  background-color: #000A81;
-  border-radius: 5em 5em 0 5em;
+.faq .second td {
+  width: 50%;
 }
 
-.faq .content .answer {
-  text-align: left;
+.faq .contents i {
+  font-size: 20vmin;
+  color: var(--pink);
 }
 
-.faq .content .answer p {
-  display: inline-block;
-  min-width: 50%;
-  padding: 5%;
-  background-color: #CC3467;
-  border-radius: 5em 5em 5em 0;
+.faq .contents .question {
+  padding: 0 5%;
+  font-weight: bold;
+  font-size: 3vmin;
 }
+
+.faq .contents .answer {
+  padding: 0 5%;
+  font-size: 2vmin;
+}
+
 
 /**************** 会社概要 ****************/
 .company {
-  padding: 10% 5%;
+  padding: 5%;
   text-align: center;
 }
 
 .company .header h3 {
   font-size: 2em;
-  color: #777;
+  color: var(--darkgrey);
 }
 
 .company .header .underline {
@@ -693,7 +834,7 @@ h1 {
   display: inline-block;
   width: 50px;
   height: 2px;
-  background-color: #CC3467;
+  background-color: var(--pink);
 }
 
 .company .company_logo img {
@@ -715,7 +856,7 @@ h1 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
-  color: #777;
+  color: var(--darkgrey);
 }
 
 .company .contents ul {
@@ -733,7 +874,7 @@ h1 {
 /**************** フッター ****************/
 footer {
   width: 100%;
-  background-color: #777;
+  background-color: var(--pink);
   color: #fff;
   padding: 2% 0;
   text-align: center;
@@ -752,7 +893,7 @@ footer {
 
 #menu a {
   text-decoration: none;
-  color: #777;
+  color: var(--darkgrey);
 }
 
 .homemenu img {
@@ -768,7 +909,7 @@ footer {
   display: none;
   background-color: #fff;
   border: 1px solid #ddd;
-  width: 20%;
+  width: 50%;
 }
 
 .homemenu ul{
@@ -786,7 +927,7 @@ footer {
 
 #menu dd a:hover {
   cursor: pointer;
-  color: #CC3467;
+  color: var(--pink);
 }
 
 
@@ -806,7 +947,7 @@ footer {
   width: 40px;
   height: 5px;
   display: block;
-  background-color: #CC3467;
+  background-color: var(--pink);
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -848,8 +989,8 @@ footer {
 #scrollTop a {
   position: fixed;
   text-decoration: none;
-  color: #CC3467;
-  left: 20px;
+  color: var(--orange);
+  right: 2%;
   bottom: 0;
   font-size: 10vmin;
 }
@@ -858,6 +999,19 @@ footer {
   cursor: pointer;
 }
 
+/**************** メッセージボタン ****************/
+#inquiry_message a {
+  position: fixed;
+  text-decoration: none;
+  color: var(--green);
+  left: 2%;
+  bottom: 40%;
+  font-size: 5vmin;
+}
+
+#inquiry_message a:hover {
+  cursor: pointer;
+}
 
 
 
