@@ -30,6 +30,7 @@
 .homemenu ul{
   margin: 0;
   padding-left: 10%;
+  text-align: left;
 }
 
 .homemenu li{
@@ -71,7 +72,7 @@
 
 .icon-animation span {
   position: absolute;
-  width: 5vmin;
+  width: 8vmin;
   height: 1vmin;
   display: block;
   background-color: var(--pink);
@@ -120,6 +121,11 @@
 
   .banner_contents .content_inner .text {
     display: table-cell;
+  }
+
+  .banner_contents .content_inner .image {
+    display: table-cell;
+    width: 70%;
   }
 
   .about .sp {
@@ -209,20 +215,31 @@
     display: none;
   }
 
-  .about .sp .section_one{
-    color: var(--darkgrey);
-    width: 30%;
-    font-size: 50px;
+  .about .sp .section_one td {
+    vertical-align: middle;
+    text-align: left;
   }
 
-  .about .sp .desciption{
+  .about .sp .section_one .icon {
+    font-size: 50px;
+    width: 5%;
+  }
+
+  .about .sp .desciption {
     font-family: var(--font_gothic);
     font-size: 2vmin;
+    font-weight: normal;
+  }
+
+  .about .sp .desciption .bold{
+    font-weight: bold;
   }
 
   .about .sp h4{
     border-left: none;
     margin-bottom: 0;
+    color: var(--pink);
+    font-weight: bold;
   }
 
 /**************** ハイライト ****************/
@@ -232,6 +249,7 @@
 
   .features .feature_content p {
     padding: 0 10%;
+    margin: 0;
   }
 
   .features .feature_content .subtitle {
@@ -239,10 +257,42 @@
     padding: 0 2%;
   }
 
+/**************** カスタマーズ ****************/
+  .customers .customers_contents {
+    margin: 5% 10%;
+    display: block;
+  }
 
-/**************** ハイライト ****************/
+  .customers .content {
+    margin-bottom: 5%;
+    height: 180px;
+  }
+
+  .customers .content .company {
+    width: 100px;
+    height: 50px;
+    margin-left: 0;
+  }
+
+  .customers .content .company p{
+    width: 100px;
+  }
+
+  .customers .content .image img {
+    width: 250px;
+    height: 150px;
+  }
+
+/**************** 無料トライアル ****************/
+  .trial p {
+    margin: 0 10%;
+    text-align: left;
+  }
+
+/**************** 料金体系 ****************/
   .price .contents {
     margin: 5% 0;
+    padding-top: 0;
   }
 
   .price .content .content_title {
@@ -255,5 +305,19 @@
 
   .price_footer p {
     font-size: 1.5vmin;
+  }
+
+
+/**************** 会社概要 ****************/
+  .company .contents ul {
+    padding: 5%;
+  }
+
+  .company .contents .subtitle {
+    font-size: 3vmin;
+  }
+
+  .company .title {
+    width: 80%;
   }
 }

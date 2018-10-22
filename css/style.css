@@ -41,7 +41,7 @@ body {
 }
 
 .header h3{
-  font-size: 4.5vmin;
+  font-size: 2em;
   font-weight: bold;
   margin: 0;
   line-height: 1em;
@@ -228,7 +228,7 @@ header .inquiry {
   border: 1px solid #fff;
   border-radius: 0.5em;
   color: #fff;
-  font-size: 2vmin;
+  font-size: 1em;
   padding: 1%;
   margin-bottom: 2%;
 }
@@ -326,7 +326,6 @@ h1 {
 .banner {
   padding: 5%;
 }
-
 .banner_top {
   margin: 2% 0 2% 5%;
   padding: 0 5% 5% 5%;
@@ -385,7 +384,6 @@ h1 {
 .banner_contents .content_header .answer {
   display: inline-block;
   width: 80%;
-  color: #000;
   margin: 0 10%;
   font-size: 3.5vmin;
 }
@@ -398,12 +396,10 @@ h1 {
 }
 
 .banner_contents .content_inner {
-  display: block;
   margin: 0 10%;
 }
 
 .banner_contents .content_inner .text{
-  display: block;
   width: 30%;
   vertical-align: middle;
 }
@@ -415,8 +411,7 @@ h1 {
 }
 
 .banner_contents .content_inner .image {
-  display: table-cell;
-  width: 70%;
+  width: 100%;
   vertical-align: middle;
 }
 
@@ -450,11 +445,11 @@ h1 {
   vertical-align: middle;
 }
 
-.about .pc {
+.about .content {
   width: 100%;
 }
 
-.about .pc td {
+.about .content td {
   width: 33%;
 }
 
@@ -462,30 +457,30 @@ h1 {
   margin: 0;
 }
 
-.about .pc .section_one td {
+.about .content .section_one td {
   text-align: center;
   font-size: 100px;
   font-weight: bold;
   color: var(--darkgrey);
 }
 
-.about .pc .section_two td {
+.about .content .section_two td {
   font-family: var(--font_gothic);
   padding: 0 2%;
   vertical-align: top;
 }
 
-.about .content h4 {
+.about .content .section_two td h4 {
   border-left: 2px solid var(--pink);
-  padding-left: 5%;
   color: var(--pink);
+  padding-left: 2%;
 }
 
-.about .pc .section_two td .bold {
+.about .content .section_two td .bold {
   font-weight: bold;
 }
 
-.about .pc .desciption p {
+.about .content .desciption p {
   font-size: 2vmin;
 }
 
@@ -525,17 +520,16 @@ h1 {
   padding: 0;
 }
 
-.features .feature_content p {
-  font-size: 1.5vmin;
-  color: #fff;
+.features .feature_content p{
+  font-size: 2vmin;
   text-align: center;
-  padding: 0 25%;
+  color: #fff;
+  margin: 0 10%;
 }
 
 .features .feature_content .subtitle{
   font-size: 3.5vmin;
   font-weight: bold;
-  padding: 0 5%;
 }
 
 .features .description_left {
@@ -566,7 +560,7 @@ h1 {
 }
 
 .customers .customers_contents {
-  margin: 5% 10%;
+  margin: 5% auto;
   display: flex;
   justify-content: space-around;
 }
@@ -582,11 +576,11 @@ h1 {
 }
 
 .customers .content .image img {
-  width: 250px;
+  width: 300px;
   height: 200px;
+  object-fit: cover;
   border: 1px solid var(--blue);
   border-radius: 25px;
-  object-fit: cover;
 }
 
 .customers .content .company {
@@ -595,9 +589,10 @@ h1 {
   font-weight: bold;
   background-color: var(--orange);
   border-radius: 100px;
-  padding: 5%;
-  width: 150px;
+  padding: 5px;
+  width: 200px;
   height: 100px;
+  margin-left: -10%;
 }
 
 .customers .content .company:hover {
@@ -607,17 +602,16 @@ h1 {
 
 .customers .content .company p{
   position: absolute;
-  padding: 5%;
+  padding: 5px;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 150px;
+  width: 200px;
   text-align: center;
   margin: 0;
   color: #fff;
-  line-height: 2.5vmin;
   font-size: 2vmin;
 }
 
@@ -794,14 +788,12 @@ h1 {
 .faq .contents td {
   vertical-align: top;
   text-align: center;
-}
-
-.faq .first td {
-  width: 33%;
-}
-
-.faq .second td {
   width: 50%;
+  padding: 1% 5%;
+}
+
+.faq .contents .second {
+  padding: 1% 15%;
 }
 
 .faq .contents i {
@@ -810,9 +802,13 @@ h1 {
 }
 
 .faq .contents .question {
-  padding: 0 5%;
+  padding: 0 2%;
   font-weight: bold;
-  font-size: 2vmin;
+  font-size: 2.5vmin;
+}
+
+.faq .contents .question p{
+  margin-bottom: 0;
 }
 
 .faq .contents .answer {
@@ -824,26 +820,30 @@ h1 {
 /**************** 会社概要 ****************/
 .company {
   padding: 2% 5%;
+  text-align: center;
 }
 
-.company .header p {
-  background-color: var(--pink);
-}
-
-.company .header h3 {
-  font-size: 3vmin;
+.company .title {
+  text-align: left;
+  margin: 0;
+  border-left: 2px solid var(--pink);
+  padding-left: 2%;
 }
 
 .company .inner {
   display: table;
-  width: 80%;
-  margin: 0 auto;
+}
+
+.company .company_logo {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
 }
 
 .company .contents {
   display: table-cell;
-  width: 50%;
-  vertical-align: top;
+  text-align: left;
+  vertical-align: middle;
   color: var(--darkgrey);
 }
 
@@ -851,28 +851,131 @@ h1 {
   list-style: none;
 }
 
-.company .contents li {
-  font-size: 2vmin;
-  margin: 0 8% 2% 8%;
-}
-
 .company .contents .subtitle {
   font-weight: bold;
-  font-size: 3.5vmin;
+  font-size: 3vmin;
+}
+
+.company .contents li {
+  margin-bottom: 5%;
+  font-size: 2vmin;
 }
 
 /**************** フッター ****************/
 footer {
-  font-family: var(--font_gothic);
   width: 100%;
   background-color: var(--pink);
   color: #fff;
   padding: 2% 0;
   text-align: center;
   font-size: 2vmin;
+  font-family: var(--font_gothic);
 }
 
 /* .float */
+/**** #menuのフォーマット ****/
+#menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#menu a {
+  text-decoration: none;
+  color: var(--darkgrey);
+}
+
+.homemenu img {
+	margin: 0;
+  height: 40px;
+}
+
+/******** #menuのslidetoggle ********/
+#menu dd {
+  margin-left: auto;
+  text-align: center;
+  padding: 30px;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 50%;
+}
+
+.homemenu ul{
+  margin: 0;
+  padding: 5px;
+}
+
+.homemenu li{
+  margin: 0 auto;
+  padding: 10%;
+  font-size: 12px;
+  text-decoration: none;
+  list-style: none;
+}
+
+#menu dd a:hover {
+  cursor: pointer;
+  color: var(--pink);
+}
+
+
+/**************** ハンバーガーボタン ****************/
+.icon-animation {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.icon-animation span {
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  display: block;
+  background-color: var(--pink);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  top: 50%;
+}
+
+.icon-animation .top {
+  -webkit-transform: translateY(-13px);
+  -ms-transform: translateY(-13px);
+  transform: translateY(-13px);
+}
+
+.icon-animation .bottom {
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  transform: translateY(13px);
+}
+
+.is-open .middle {
+  background: rgba(215, 215, 215, 0);
+}
+
+.is-open .top {
+  -webkit-transform: rotate(-45deg) translateY(0px);
+  -ms-transform: rotate(-45deg) translateY(0px);
+  transform: rotate(-45deg) translateY(0px);
+}
+
+.is-open .bottom {
+  -webkit-transform: rotate(45deg) translateY(0px);
+  -ms-transform: rotate(45deg) translateY(0px);
+  transform: rotate(45deg) translateY(0px);
+}
+
 /**************** topに戻るボタン ****************/
 #scrollTop a {
   position: fixed;
@@ -899,4 +1002,18 @@ footer {
 
 #inquiry_message a:hover {
   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/**************** レスポンシブデザイン ****************/
+@media (max-width: 960px) {
+  header {
+    display: none;
+  }
 }
