@@ -252,7 +252,7 @@ header .inquiry:hover {
 #top_head {
   height: 100%;
   background-image: url('../image/top2.png');
-  background-position: bottom 10% right 50%;
+  background-position: bottom 10% right 45%;
   background-size: 25%;
   background-repeat: no-repeat;
 }
@@ -551,14 +551,6 @@ h1 {
   padding: 0 5%;
 }
 
-.customers .header p {
-  background-color: var(--orange);
-}
-
-.customers .header .underline:before {
-  background-color: var(--orange);
-}
-
 .customers .customers_contents {
   margin: 5% auto;
   display: flex;
@@ -678,11 +670,11 @@ h1 {
 }
 
 .price .header p {
-  background-color: var(--pink);
+  background-color: var(--blue);
 }
 
 .price .header .underline:before {
-  background-color: var(--pink);
+  background-color: var(--blue);
 }
 
 .price .contents {
