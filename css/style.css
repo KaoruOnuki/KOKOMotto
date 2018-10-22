@@ -41,7 +41,7 @@ body {
 }
 
 .header h3{
-  font-size: 2em;
+  font-size: 4.5vmin;
   font-weight: bold;
   margin: 0;
   line-height: 1em;
@@ -228,7 +228,7 @@ header .inquiry {
   border: 1px solid #fff;
   border-radius: 0.5em;
   color: #fff;
-  font-size: 1em;
+  font-size: 2vmin;
   padding: 1%;
   margin-bottom: 2%;
 }
@@ -326,6 +326,7 @@ h1 {
 .banner {
   padding: 5%;
 }
+
 .banner_top {
   margin: 2% 0 2% 5%;
   padding: 0 5% 5% 5%;
@@ -384,7 +385,7 @@ h1 {
 .banner_contents .content_header .answer {
   display: inline-block;
   width: 80%;
-  color: var(--pink);
+  color: #000;
   margin: 0 10%;
   font-size: 3.5vmin;
 }
@@ -397,12 +398,12 @@ h1 {
 }
 
 .banner_contents .content_inner {
-  display: table;
+  display: block;
   margin: 0 10%;
 }
 
 .banner_contents .content_inner .text{
-  display: table-cell;
+  display: block;
   width: 30%;
   vertical-align: middle;
 }
@@ -445,15 +446,15 @@ h1 {
   background-color: transparent;
   border-left: 2px solid var(--pink);
   border-radius: 0;
-  color: #000;
+  color: var(--pink);
   vertical-align: middle;
 }
 
-.about .content {
+.about .pc {
   width: 100%;
 }
 
-.about .content td {
+.about .pc td {
   width: 33%;
 }
 
@@ -461,29 +462,30 @@ h1 {
   margin: 0;
 }
 
-.about .content .section_one td {
+.about .pc .section_one td {
   text-align: center;
   font-size: 100px;
   font-weight: bold;
-  color: var(--pink);
+  color: var(--darkgrey);
 }
 
-.about .content .section_two td {
+.about .pc .section_two td {
   font-family: var(--font_gothic);
   padding: 0 2%;
-  text-align: center;
   vertical-align: top;
 }
 
-.about .content .section_two td h4 {
+.about .content h4 {
   border-left: 2px solid var(--pink);
+  padding-left: 5%;
+  color: var(--pink);
 }
 
-.about .content .section_two td .bold {
+.about .pc .section_two td .bold {
   font-weight: bold;
 }
 
-.about .content .desciption p {
+.about .pc .desciption p {
   font-size: 2vmin;
 }
 
@@ -497,11 +499,11 @@ h1 {
 }
 
 .highlight .header .underline:before {
-  background-color: var(--pink);
+  background-color: var(--green);
 }
 
 .features {
-  margin-top: 5%;
+  margin: 5% 10%;
   display: flex;
   justify-content: space-around;
 }
@@ -512,24 +514,28 @@ h1 {
 }
 
 .features .left {
-  background-color: var(--green);
-  border-radius: 25px 0 0 300px;
-  border-right: 2px solid var(--green);
+  background-color: var(--pink);
+  border-radius: 50px 0 0 50px;
   padding: 0;
 }
 
 .features .right {
-  background-color: var(--green);
-  border-radius: 0 25px 300px 0;
-  border-right: 2px solid var(--green);
+  background-color: var(--pink);
+  border-radius: 0 50px 50px 0;
   padding: 0;
 }
 
-.features .feature_content p{
-  font-size: 3.5vmin;
-  text-align: center;
+.features .feature_content p {
+  font-size: 1.5vmin;
   color: #fff;
+  text-align: center;
+  padding: 0 25%;
+}
+
+.features .feature_content .subtitle{
+  font-size: 3.5vmin;
   font-weight: bold;
+  padding: 0 5%;
 }
 
 .features .description_left {
@@ -551,15 +557,23 @@ h1 {
   padding: 0 5%;
 }
 
+.customers .header p {
+  background-color: var(--orange);
+}
+
+.customers .header .underline:before {
+  background-color: var(--blue);
+}
+
 .customers .customers_contents {
-  margin: 5% auto;
+  margin: 5% 10%;
   display: flex;
   justify-content: space-around;
 }
 
 .customers .content {
   position: relative;
-  height: 300px;
+  height: 250px;
 }
 
 .customers .content .description {
@@ -568,8 +582,11 @@ h1 {
 }
 
 .customers .content .image img {
-  width: 300px;
+  width: 250px;
   height: 200px;
+  border: 1px solid var(--blue);
+  border-radius: 25px;
+  object-fit: cover;
 }
 
 .customers .content .company {
@@ -578,28 +595,30 @@ h1 {
   font-weight: bold;
   background-color: var(--orange);
   border-radius: 100px;
-  padding: 5px;
-  width: 200px;
-  height: 200px;
-  margin-left: -30%;
+  padding: 5%;
+  width: 150px;
+  height: 100px;
 }
 
 .customers .content .company:hover {
   cursor: pointer;
+  background-color: var(--darkgrey);
 }
 
 .customers .content .company p{
   position: absolute;
-  padding: 5px;
+  padding: 5%;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 200px;
+  width: 150px;
   text-align: center;
   margin: 0;
   color: #fff;
+  line-height: 2.5vmin;
+  font-size: 2vmin;
 }
 
 /****** モーダル ******/
@@ -674,7 +693,7 @@ h1 {
 }
 
 .price .header .underline:before {
-  background-color: var(--blue);
+  background-color: var(--pink);
 }
 
 .price .contents {
@@ -786,14 +805,14 @@ h1 {
 }
 
 .faq .contents i {
-  font-size: 20vmin;
+  font-size: 15vmin;
   color: var(--pink);
 }
 
 .faq .contents .question {
   padding: 0 5%;
   font-weight: bold;
-  font-size: 3vmin;
+  font-size: 2vmin;
 }
 
 .faq .contents .answer {
@@ -804,50 +823,27 @@ h1 {
 
 /**************** 会社概要 ****************/
 .company {
-  padding: 5%;
-  text-align: center;
+  padding: 2% 5%;
 }
 
-.company .header h3 {
-  font-size: 2em;
-  color: var(--darkgrey);
-}
-
-.company .header .underline {
-  position: relative;
-  display: inline-block;
-}
-
-.company .header .underline:before {
-  content: '';
-  position: absolute;
-  left: 30%;
-  bottom: -10px;
-  display: inline-block;
-  width: 50px;
-  height: 2px;
+.company .header p {
   background-color: var(--pink);
 }
 
-.company .company_logo img {
-  width: 70%;
+.company .header h3 {
+  font-size: 3vmin;
 }
 
 .company .inner {
   display: table;
-  margin-top: 5%;
-}
-
-.company .company_logo {
-  display: table-cell;
-  width: 50%;
-  vertical-align: middle;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .company .contents {
   display: table-cell;
-  text-align: left;
-  vertical-align: middle;
+  width: 50%;
+  vertical-align: top;
   color: var(--darkgrey);
 }
 
@@ -855,16 +851,19 @@ h1 {
   list-style: none;
 }
 
-.company .contents .subtitle {
-  font-weight: bold;
+.company .contents li {
+  font-size: 2vmin;
+  margin: 0 8% 2% 8%;
 }
 
-.company .contents li {
-  margin-bottom: 5%;
+.company .contents .subtitle {
+  font-weight: bold;
+  font-size: 3.5vmin;
 }
 
 /**************** フッター ****************/
 footer {
+  font-family: var(--font_gothic);
   width: 100%;
   background-color: var(--pink);
   color: #fff;
@@ -874,109 +873,6 @@ footer {
 }
 
 /* .float */
-/**** #menuのフォーマット ****/
-#menu {
-  position: fixed;
-  right: 0;
-  top: 0;
-  margin: 0;
-  width: 100%;
-}
-
-#menu a {
-  text-decoration: none;
-  color: var(--darkgrey);
-}
-
-.homemenu img {
-	margin: 0;
-  height: 40px;
-}
-
-/******** #menuのslidetoggle ********/
-#menu dd {
-  margin-left: auto;
-  text-align: center;
-  padding: 30px;
-  display: none;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  width: 50%;
-}
-
-.homemenu ul{
-  margin: 0;
-  padding: 5px;
-}
-
-.homemenu li{
-  margin: 0 auto;
-  padding: 10%;
-  font-size: 12px;
-  text-decoration: none;
-  list-style: none;
-}
-
-#menu dd a:hover {
-  cursor: pointer;
-  color: var(--pink);
-}
-
-
-/**************** ハンバーガーボタン ****************/
-.icon-animation {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 10px;
-  right: 10px;
-  display: block;
-  cursor: pointer;
-}
-
-.icon-animation span {
-  position: absolute;
-  width: 40px;
-  height: 5px;
-  display: block;
-  background-color: var(--pink);
-  border-radius: 5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  top: 50%;
-}
-
-.icon-animation .top {
-  -webkit-transform: translateY(-13px);
-  -ms-transform: translateY(-13px);
-  transform: translateY(-13px);
-}
-
-.icon-animation .bottom {
-  -webkit-transform: translateY(13px);
-  -ms-transform: translateY(13px);
-  transform: translateY(13px);
-}
-
-.is-open .middle {
-  background: rgba(215, 215, 215, 0);
-}
-
-.is-open .top {
-  -webkit-transform: rotate(-45deg) translateY(0px);
-  -ms-transform: rotate(-45deg) translateY(0px);
-  transform: rotate(-45deg) translateY(0px);
-}
-
-.is-open .bottom {
-  -webkit-transform: rotate(45deg) translateY(0px);
-  -ms-transform: rotate(45deg) translateY(0px);
-  transform: rotate(45deg) translateY(0px);
-}
-
 /**************** topに戻るボタン ****************/
 #scrollTop a {
   position: fixed;
@@ -1003,18 +899,4 @@ footer {
 
 #inquiry_message a:hover {
   cursor: pointer;
-}
-
-
-
-
-
-
-
-
-/**************** レスポンシブデザイン ****************/
-@media (max-width: 960px) {
-  header {
-    display: none;
-  }
 }

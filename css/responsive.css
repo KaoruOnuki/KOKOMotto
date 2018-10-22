@@ -1,0 +1,259 @@
+/**** #menuのフォーマット ****/
+#menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#menu a {
+  text-decoration: none;
+  color: var(--darkgrey);
+}
+
+.homemenu img {
+	margin: 0;
+  height: 8vmin;
+}
+
+/******** #menuのslidetoggle ********/
+#menu dd {
+  margin-left: auto;
+  padding: 5% 0;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 45%;
+}
+
+.homemenu ul{
+  margin: 0;
+  padding-left: 10%;
+}
+
+.homemenu li{
+  margin: 0 auto;
+  padding: 5%;
+  font-size: 2vmin;
+  text-decoration: none;
+  list-style: none;
+}
+
+#menu dd a:hover {
+  cursor: pointer;
+  color: var(--pink);
+}
+
+#menu .homemenu .pink a {
+  color: #fff;
+  padding: 5%;
+  font-family: var(--font_gothic);
+  background-color: var(--pink);
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#menu .homemenu .pink a:hover {
+  background-color: var(--darkgrey);
+}
+
+/**************** ハンバーガーボタン ****************/
+.icon-animation {
+  position: absolute;
+  width: 10vmin;
+  height: 10vmin;
+  top: 10px;
+  right: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.icon-animation span {
+  position: absolute;
+  width: 5vmin;
+  height: 1vmin;
+  display: block;
+  background-color: var(--pink);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  top: 50%;
+}
+
+.icon-animation .top {
+  -webkit-transform: translateY(-13px);
+  -ms-transform: translateY(-13px);
+  transform: translateY(-13px);
+}
+
+.icon-animation .bottom {
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  transform: translateY(13px);
+}
+
+.is-open .middle {
+  background: rgba(215, 215, 215, 0);
+}
+
+.is-open .top {
+  -webkit-transform: rotate(-45deg) translateY(0px);
+  -ms-transform: rotate(-45deg) translateY(0px);
+  transform: rotate(-45deg) translateY(0px);
+}
+
+.is-open .bottom {
+  -webkit-transform: rotate(45deg) translateY(0px);
+  -ms-transform: rotate(45deg) translateY(0px);
+  transform: rotate(45deg) translateY(0px);
+}
+
+/******************************** レスポンシブデザイン ********************************/
+@media (min-width: 761px) {
+  .banner_contents .content_inner {
+    display: table;
+  }
+
+  .banner_contents .content_inner .text {
+    display: table-cell;
+  }
+
+  .about .sp {
+    display: none;
+  }
+}
+
+/******************************** レスポンシブデザイン ********************************/
+@media (max-width: 760px) {
+  .header h3{
+    font-size: 3vmin;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1em;
+  }
+
+  .header .underline:before {
+    width: 50px;
+    bottom: -10px;
+  }
+
+/**************** ヘッダー ****************/
+  header {
+    display: none;
+  }
+
+/**************** トップ ****************/
+  .top_section {
+    height: auto;
+    padding-bottom: 5%;
+  }
+
+  .top_section h1 {
+    font-size: 2em;
+  }
+
+  .top_section .top_contents {
+    height: auto;
+  }
+
+  .top_section #top_head {
+    height: 45%;
+    background-position: bottom 0% right 30%;
+    background-size: 30%;
+  }
+
+  .top_section .content {
+    width: 90%;
+  }
+
+  .top_section .content h2 {
+    margin-bottom: 0;
+  }
+
+/**************** バナー ****************/
+  .banner {
+    padding: 5% 0;
+  }
+
+  .banner_top p {
+    font-size: 2.5vmin;
+  }
+
+  .banner_contents .content_header .question p {
+    font-size: 2.5vmin;
+  }
+
+  .banner_contents .content_header .answer p {
+    text-align: left;
+    font-size: 3vmin;
+  }
+
+  .banner_contents .content_inner .text {
+    width: 100%;
+  }
+
+  .banner_contents .content_inner .text p {
+    margin: 0;
+  }
+
+/**************** アバウト ****************/
+  .about .header {
+    margin: 0;
+  }
+
+  .about .pc {
+    display: none;
+  }
+
+  .about .sp .section_one{
+    color: var(--darkgrey);
+    width: 30%;
+    font-size: 50px;
+  }
+
+  .about .sp .desciption{
+    font-family: var(--font_gothic);
+    font-size: 2vmin;
+  }
+
+  .about .sp h4{
+    border-left: none;
+    margin-bottom: 0;
+  }
+
+/**************** ハイライト ****************/
+  .features {
+    margin: 5% 0;
+  }
+
+  .features .feature_content p {
+    padding: 0 10%;
+  }
+
+  .features .feature_content .subtitle {
+    font-size: 3vmin;
+    padding: 0 2%;
+  }
+
+
+/**************** ハイライト ****************/
+  .price .contents {
+    margin: 5% 0;
+  }
+
+  .price .content .content_title {
+    border-radius: 25px 0 0 25px;
+  }
+
+  .price .content .content_description {
+    border-radius: 0 25px 25px 0;
+  }
+
+  .price_footer p {
+    font-size: 1.5vmin;
+  }
+}
